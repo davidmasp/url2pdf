@@ -1,0 +1,11 @@
+[project]
+name = "urls2pdf"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "playwright>=1.55.0",
+    "tqdm>=4.67.1",
+    "click>=8.1.7",
+]
