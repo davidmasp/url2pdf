@@ -1,6 +1,6 @@
 [project]
 name = "urls2pdf"
-version = "0.2.0"
+version = "0.2.1"
 description = "Render lists of web pages to individual PDFs with Chromium"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -12,6 +12,7 @@ dependencies = [
 
 [project.scripts]
 urls2pdf = "urls2pdf.cli:app"
+url2pdf = "urls2pdf.cli:app"
 
 [build-system]
 requires = ["hatchling>=1.27,<2"]

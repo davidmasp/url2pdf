@@ -20,6 +20,9 @@ and may require root privileges.
 
 If your shell cannot find `urls2pdf`, run `uv tool update-shell` and restart it.
 
+Installation also provides `url2pdf` as an alias for `urls2pdf`, with the same
+commands and options.
+
 ## Render
 
 Create a UTF-8 text file containing one URL per line. Blank lines and lines
@@ -130,5 +133,5 @@ The code lives in `src/urls2pdf`: `cli.py` defines the Typer commands, `urls.py`
 loads URL files, `browser.py` installs Chromium, `renderer.py` manages browser
 resources and records per-page results, and `papers.py` defines publisher rules,
 PDF discovery, and downloads. Runtime dependencies and the console
-entry point are declared in `pyproject.toml`; `uv.lock` records the development
+entry points are declared in `pyproject.toml`; `uv.lock` records the development
 environment. Add dependencies with `uv add <package>`.
