@@ -1,0 +1,11 @@
+# Use explicitly: urls2pdf render urls.txt --papers --papers-config example.journals.toml
+# Copy this file to journals.toml and add or replace rules for other hosts.
+# Hostnames match exactly, ignoring case; attribute defaults to "href".
+
+[papers.domains."www.nature.com"]
+selectors = ['a[data-test="download-pdf"][data-article-pdf="true"]']
+attribute = "href"
+
+[papers.domains."www.biorxiv.org"]
+selectors = ['a.article-dl-pdf-link[href]']
+attribute = "href"

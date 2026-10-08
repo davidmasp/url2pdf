@@ -1,11 +1,24 @@
 [project]
 name = "urls2pdf"
 version = "0.1.0"
-description = "Add your description here"
+description = "Render lists of web pages to individual PDFs with Chromium"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "playwright>=1.55.0",
     "tqdm>=4.67.1",
-    "click>=8.1.7",
+    "typer>=0.16.0",
 ]
+
+[project.scripts]
+urls2pdf = "urls2pdf.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/urls2pdf"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/urls2pdf", "tests", "README.md", "example.journals.toml", "pyproject.toml", "uv.lock"]
