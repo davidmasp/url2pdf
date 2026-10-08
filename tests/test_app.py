@@ -116,7 +116,7 @@ class CLITests(unittest.TestCase):
         self.assertIn("render", result.output)
         result = self.runner.invoke(app, ["--version"])
         self.assertEqual(result.exit_code, 0, result.output)
-        self.assertIn("urls2pdf 0.1.0", result.output)
+        self.assertIn("urls2pdf 0.2.0", result.output)
 
     @patch("urls2pdf.cli.PDFRenderer")
     def test_empty_input_needs_no_browser(self, renderer):
